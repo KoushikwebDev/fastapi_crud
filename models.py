@@ -23,6 +23,7 @@ class Product(Base):
 # This schema is used by FastAPI to validate incoming request data and format
 # outgoing response data (JSON). It does NOT interact directly with the database.
 class ProductSchema(BaseModel):
+    id: Optional[int] = None
     name : str
     description : str
     price : float

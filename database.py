@@ -8,7 +8,7 @@ engine = create_engine(DATABASE_URL)
 
 with engine.connect() as connection:
     result = connection.execute(text("SELECT 1"))
-    print(result.fetchone())
+    print(result.fetchone(), "connected")
 
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 Base = declarative_base()
